@@ -1,0 +1,193 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+
+
+}
+body{
+
+
+}
+
+/* SCROLL BAR */
+#story::-webkit-scrollbar {
+    width: 1em;
+}
+
+#story::-webkit-scrollbar-track {
+
+    border-radius: 0.625em;
+}
+
+#story::-webkit-scrollbar-thumb {
+    border-radius: 0.625em;
+    background: orange;
+}
+.hidden{
+     opacity: 0;
+}
+.visible{
+     opacity:1;
+}
+
+.come-in {
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  -webkit-animation: come-in 0.8s ease forwards;
+          animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+.already-visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+#story{
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 1em;
+}
+section.blocks {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+line-height: 1.25em;
+margin: 1em auto;
+color: white;
+    background: #2e302f;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.3125em;
+    text-align: justify;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
+	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
+overflow: hidden;
+}
+section > .header{
+  width: 5%;
+  height: 100%;
+}
+section > .header > header{
+
+  font-size: 1.4em;
+  line-height: 0.4em;
+  margin: 0.700em 0;
+  padding: 1em;
+  text-align: center;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+section > p{
+
+height: 100%;
+
+line-height: 2.4em;
+    word-spacing: 0.2em;
+    padding: 3em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+
+}
+section.thoughts{
+font-size: 1.3em;
+}
+section.thoughts > hr {
+color: orange;
+}
+#bottom{
+  text-align: center;
+}
+
+/* Media QUERIES */
+
+@media only screen and (max-width: 768px) and (orientation : portrait)  {
+
+#story{
+  height: 100%;
+  padding-right: 0.5em;
+}
+section{
+  padding: 0;
+
+}
+section > .header > header{
+  padding: 0.7em;
+  font-size: 0.7em;
+line-height: 0.4em;
+margin: 0.300em 0;
+}
+section > .header{
+  width: auto;
+}
+section > p{
+  line-height: 1.6em;
+  font-size: 0.5em;
+      padding: 1em;
+    letter-spacing: 0.1em;
+}
+
+
+}
+@media only screen and (max-width: 1024px) {
+
+  #story{
+    height: 100%;
+    padding-right: 0.5em;
+  }
+  section{
+    padding: 0;
+
+  }
+  section > .header > header{
+    padding: 0.8em;
+    font-size: 0.6em;
+  line-height: 0.4em;
+  margin: 0.300em 0;
+  }
+  section > .header{
+    width: auto;
+  }
+  section > p{
+    line-height: 1.6em;
+    font-size: 0.6em;
+        padding: 1em;
+      letter-spacing: 0.1em;
+  }
+
+
+
+
+}
